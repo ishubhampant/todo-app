@@ -67,6 +67,15 @@ form button:hover {
   cursor: pointer;
   font-size: 1rem;
 }
+
+.edit-btn{
+  background: greenyellow;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
 .complete-btn {
   background: #0060af;
 }

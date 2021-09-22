@@ -1,6 +1,6 @@
 import Todo from "./Todo";
 
-const TodoList = ({ todoItems, setTodoItems, filteredItems }) => {
+const TodoList = ({ todoItems, setTodoItems, filteredItems,setInputText ,setInputTextID}) => {
   return (
     <div className="todo-container">
       <ol className="todo-list">
@@ -11,6 +11,8 @@ const TodoList = ({ todoItems, setTodoItems, filteredItems }) => {
             key={todo.id}
             todo={todo}
             text={todo.text}
+            setInputText={setInputText}
+            setInputTextID={setInputTextID}
           />
         ))}
       </ol>

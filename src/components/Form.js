@@ -1,8 +1,10 @@
 const Form = ({
   setInputText,
+  setInputTextID,
   todoItems,
   setTodoItems,
   inputText,
+  inputTextID,
   setFlag,
 }) => {
   const inputTextHandler = (e) => {
@@ -11,6 +13,28 @@ const Form = ({
 
   const submitTodoHandler = (e) => {
     e.preventDefault();
+    if(inputText.trim().length===0){
+      setInputText("");
+      return
+    }
+   /* if(inputTextID!==""){
+      console.log("hello")
+      console.log(inputTextID)
+      this.setState({
+        todoItems: this.state.todoItems.map(el => (el.id === inputTextID ? Object.assign({}, el, { inputText }) : el))
+      });
+      var foundIndex = todoItems.findIndex(x => x.id == inputTextID);
+      todoItems[foundIndex] = inputText;
+      
+      setTodoItems([
+        ...todoItems,
+        { text: inputText, completed: false, id: inputTextID },
+      ]);
+      setInputTextID("")
+      return
+    }
+    */
+
     setTodoItems([
       ...todoItems,
       { text: inputText, completed: false, id: Math.random() * 1000 },

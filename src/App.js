@@ -5,6 +5,7 @@ import TodoList from "./components/TodoList";
 
 function App() {
   const [inputText, setInputText] = useState("");
+  const [inputTextID, setInputTextID] = useState("");
   const [todoItems, setTodoItems] = useState([]);
   const [flag, setFlag] = useState("all");
   const [filteredItems, setFilteredItems] = useState([]);
@@ -35,13 +36,17 @@ function App() {
       </header>
       <Form
         inputText={inputText}
+        inputTextID={inputTextID}
         todoItems={todoItems}
         setTodoItems={setTodoItems}
         setInputText={setInputText}
+        setInputTextID={setInputTextID}
         setFlag={setFlag}
       />
       <TodoList
         setTodoItems={setTodoItems}
+        setInputText={setInputText}
+        setInputTextID={setInputTextID}
         todoItems={todoItems}
         filteredItems={filteredItems}
       />
